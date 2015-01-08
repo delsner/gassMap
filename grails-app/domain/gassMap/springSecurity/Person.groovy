@@ -40,6 +40,7 @@ class Person {
 	null
 	]
 	
+	List addresses = []
 	// START: Relationships
 	static hasMany = [
 	addresses: Address
