@@ -13,7 +13,8 @@ class BootStrap {
 		def adminUser = Person.findByUsername('admin') ?: new Person( username: 'admin', password: 'admin', email:'admin@admin.de', enabled: true).save(failOnError: true)
 		if (!adminUser.authorities.contains(adminRole)) {
 			PersonRole.create(adminUser, adminRole, true)
-			def address = new Address(street:'arschstrasse').save(failOnError: true)
+			Address address = new Address(street:'arschstrasse')
+			address.save(failOnError: true)
 			adminUser.addresses.add(address)
 			adminUser.save(flush: true)
 			}
@@ -22,15 +23,15 @@ class BootStrap {
 		def testUser = Person.findByUsername('test') ?: new Person( username: 'test', password: 'chill', email:'admin@test.de', enabled: true).save(failOnError: true)
 		if (!testUser.authorities.contains(userRole)) {
 			PersonRole.create(testUser, userRole, true)
-			address = new Address(
+			Address address1 = new Address(
 					street:'Christpohstrasse',
 					streetNumber:'15',
 					zipcode:'54290',
 					city:'Trier',
 					country:'Deutschland'
 					)
-			address.save(failOnError: true)
-			testUser.addresses.add(address)
+			address1.save(failOnError: true)
+			testUser.addresses.add(address1)
 			testUser.save(flush:true)
 			}
 		}
