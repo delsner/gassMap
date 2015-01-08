@@ -17,8 +17,23 @@
 		<g:layoutHead/>
 	</head>
 	<body>
-		<div>header</div>
-		<g:layoutBody/>
-		<div>footer</div>
+	<div id="wrapper">
+		<div id="header">
+			<g:render template="/header"/>
+		</div>
+		<!-- END BOOTSTRAP NAVIGATION -->
+		<div class="clearfix"></div>
+		<div class="mainColumn">
+		        <div id="mainContent">
+		            <g:layoutBody/>
+		        </div>
+		        </div>
+		<div class="clearfix"></div>
+		<div class="footer">
+		<div id="footer">
+			<g:render template="/footer"/>
+		</div>	
+		</div>
+	</div>
 	</body>
 </html>

@@ -5,7 +5,11 @@
 		<title>MapPage</title>
 	</head>
 	<body>
-		<div> <p>Hallo ${per} ! </p>
-		</div>
+		<sec:ifLoggedIn> 
+			<p>Hallo ${per.username} ! ${address.street}</p>
+		</sec:ifLoggedIn>
+		<sec:ifNotLoggedIn>
+			<p>Hier gibt's nichts zu sehen!</p>
+		</sec:ifNotLoggedIn>
 	</body>
 </html>
