@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">GASS Map</a>
+          <a class="navbar-brand" style="color:#B40404;">GASS Map</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <!-- NAVIGATION ITEMS LEFT -->

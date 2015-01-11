@@ -6,5 +6,5 @@
 
 <hr>
 
-<a href="/">GASS MAP</a>
+<a style="color:#B40404;">GASS MAP</a>
 </div>

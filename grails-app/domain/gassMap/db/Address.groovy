@@ -16,4 +16,14 @@ class Address {
 		zipcode nullable:true
 		country nullable:true
     }
+	
+	public String toString () {
+		String result = street + " "
+		result = result + streetNumber + " "
+		//result = result + extension + " "
+		result = result + zipcode + " "
+		result = result + city + " "
+		result = result + country
+		return result
+	}
 }

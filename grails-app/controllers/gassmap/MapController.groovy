@@ -9,15 +9,18 @@ class MapController {
     def index() {
 		Person per = springSecurityService.currentUser
 		Address address
+		String strAddress = null
 		if(per){
 			address = per.addresses[0]
+			strAddress = address
 		}
 		else{
 			address = null
 		}
 		return [
 			per:per,
-			address:address
+			address:address,
+			strAddress:strAddress
 			]
 	}
 }

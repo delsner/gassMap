@@ -24,7 +24,7 @@ class BootStrap {
 		if (!testUser.authorities.contains(userRole)) {
 			PersonRole.create(testUser, userRole, true)
 			Address address1 = new Address(
-					street:'Christpohstrasse',
+					street:'Christophstrasse',
 					streetNumber:'15',
 					zipcode:'54290',
 					city:'Trier',
