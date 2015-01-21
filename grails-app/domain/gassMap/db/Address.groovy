@@ -7,6 +7,8 @@ class Address {
 	String city
 	String zipcode
 	String country
+	Float longitude
+	Float latitude
 	
     static constraints = {
 		street nullable:true
@@ -15,6 +17,8 @@ class Address {
 		city nullable:true
 		zipcode nullable:true
 		country nullable:true
+		longitude nullable:true
+		latitude nullable:true
     }
 	
 	public String toString () {
